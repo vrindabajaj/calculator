@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.container {
+    padding: 250px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    border: 2px solid purple;
+    padding: 35px;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.lcd-screen {
+    border: 2px solid blue;
+    height: 20%;
+}
+
+.buttons {
+    border: 2px solid green;
+    height: 75%;
+}
+
+button {
+    
+}
