@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: #f99e71
 }
 
 .container {
@@ -14,7 +14,8 @@ body {
 }
 
 .calculator {
-    border: 2px solid purple;
+    background-color: #ffdac7;
+    border-radius: 20px;
     padding: 35px;
     height: 500px;
     width: 400px;
@@ -24,7 +25,8 @@ body {
 }
 
 .lcd-screen {
-    border: 2px solid blue;
+    background-color: #b3c292;
+    border-radius: 3px;
     height: 20%;
 }
 
@@ -43,10 +45,6 @@ body {
     height: 100%;
 }
 
-button {
-    
-}
-
 .number, .operator, .dot {
     width: 20%;
 }
@@ -57,4 +55,41 @@ button {
 
 .equal {
     width: 50%;
+}
+
+button {
+    background-color: #ffcb9a;
+    border: none;
+    border-radius: 5px;
+    box-shadow: #ffaf87 0 3px 0 4px;
+    color: #422800;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+button:hover {
+    background-color: #ffd5ad;
+}
+
+button:active {
+    background-color: #ffd5ad;
+    box-shadow: #ffaf87 0 0px 0 3px;
+    transform: translate(0px, 3px);
+}
+
+.alt-col {
+    background-color: #f9d19a;
+    box-shadow: #ffbe73 0 3px 0 4px;
+}
+
+.alt-col:hover {
+    background-color: #ffdaa7;
+}
+
+.alt-col:active {
+    background-color: #ffdaa7;
+    box-shadow: #ffbe73 0 0px 0 3px;
 }
