@@ -21,13 +21,21 @@ body {
     width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 5%;
+    gap: 8%;
 }
 
 .lcd-screen {
+    margin: 0;
+    padding: 10px;
     background-color: #b3c292;
-    border-radius: 3px;
-    height: 20%;
+    box-shadow: #6c725f 0px -2px 0px 3px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    justify-content: end;
+    color: #3e4139;
 }
 
 .buttons {
@@ -65,7 +73,7 @@ button {
     color: #422800;
     cursor: pointer;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 22px;
     user-select: none;
     -webkit-user-select: none;
 }
