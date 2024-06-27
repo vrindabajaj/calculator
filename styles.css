@@ -64,14 +64,14 @@ body {
 }
 
 .equal {
-    width: 50%;
+    width: 48%;
 }
 
 /* button styling */
 button {
     background-color: #ffcb9a;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     box-shadow: #ffaf87 0 3px 0 4px;
     color: #422800;
     cursor: pointer;
@@ -86,8 +86,8 @@ button:hover {
 }
 
 button:active {
-    background-color: #ffd5ad;
-    box-shadow: #ffaf87 0 0px 0 3px;
+    background-color: #ffc289;
+    box-shadow: #ffaf87 0 -1px 0 3px;
     transform: translate(0px, 3px);
 }
 
@@ -101,6 +101,7 @@ button:active {
 }
 
 .number:active {
-    background-color: #ffdaa7;
-    box-shadow: #ffbe73 0 0px 0 3px;
+    background-color: #ffcc85;
+    box-shadow: #ffbe73 0 -1px 0 3px;
+    transform: translate(0px, 3px);
 }
