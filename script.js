@@ -86,6 +86,7 @@ backspaceBtn.addEventListener("click", () => {
 
 function calculate(){
     valueA = operate(valueA, valueB, operation);
+    //To prevent display overflow
     if (valueA.toString().length > 13){
         valueA = valueA.toExponential(3);
     }
