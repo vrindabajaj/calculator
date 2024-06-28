@@ -1,11 +1,11 @@
 let isOperatorSelected = false;
 let isEqualsPressed = false;
-let displayValue = "";
 let valueA = "";
 let valueB = "";
 let operation = "";
 
-const display = document.querySelector(".lcd-screen");
+const display = document.querySelector(".value");
+const operatorDisplay = document.querySelector(".operation");
 
 const numbers = document.querySelectorAll(".number");
 numbers.forEach((number) => {
@@ -31,24 +31,25 @@ numbers.forEach((number) => {
 const operators = document.querySelectorAll(".operator");
 operators.forEach((operator) => {
     operator.addEventListener("click", (e) => {
-        isOperatorSelected = true;
         operation = e.target.textContent;
-        display.textContent = operation;
+        if (isOperatorSelected) {
+            calculate();
+            operatorDisplay.textContent = operation;
+        }
+        else {
+            operatorDisplay.textContent = operation;
+        }
+        isOperatorSelected = true;
+        
     })
 })
 
 const equalBtn = document.querySelector(".equal");
 equalBtn.addEventListener(("click"), () => {
     if (isOperatorSelected) {
-        valueA = operate(valueA, valueB, operation);
-        if (valueA.toString().length > 13){
-            valueA = valueA.toExponential(3);
-        }
-        display.textContent = valueA;
-        valueB = "";
-        isOperatorSelected = false;
-        isEqualsPressed = true;
+        calculate();
     }
+    operatorDisplay.textContent = "";
 })
 
 const clearBtn = document.querySelector("#clear");
@@ -58,6 +59,7 @@ clearBtn.addEventListener(("click"), () => {
     isOperatorSelected = false;
     isEqualsPressed = false;
     display.textContent = "000";
+    operatorDisplay.textContent = "";
 })
 
 const backspaceBtn = document.querySelector("#backspace");
@@ -80,9 +82,20 @@ backspaceBtn.addEventListener("click", () => {
     } 
     else {
         isOperatorSelected = false;
-        display.textContent = valueA;
+        operatorDisplay.textContent = "";
     }  
 })
+
+function calculate(){
+    valueA = operate(valueA, valueB, operation);
+    if (valueA.toString().length > 13){
+        valueA = valueA.toExponential(3);
+    }
+    display.textContent = valueA;
+    valueB = "";
+    isOperatorSelected = false;
+    isEqualsPressed = true;
+}
 
 function backspace(value){
     return value = value.slice(0, -1);

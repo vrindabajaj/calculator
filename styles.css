@@ -23,18 +23,36 @@ body {
     width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 8%;
+    gap: 5%;
 }
 
 .lcd-screen {
     margin: 0;
-    padding: 10px;
+    padding: 0 10px;
+    min-height: 90px;
     background-color: #b3c292;
     box-shadow: #6c725f 0 -2px 0 3px;
     border-radius: 5px;
     border: none;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.operation {
+    margin: 0;
+    height: 35%;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    color: #434a36;
+    
+}
+
+.value {
+    margin: 0;
+    display: flex;
     font-size: 40px;
     justify-content: end;
     color: #434a36;
