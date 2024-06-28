@@ -32,15 +32,12 @@ const operators = document.querySelectorAll(".operator");
 operators.forEach((operator) => {
     operator.addEventListener("click", (e) => {
         operation = e.target.textContent;
-        if (isOperatorSelected) {
+        if (isOperatorSelected && valueB != "") {
             calculate();
-            operatorDisplay.textContent = operation;
-        }
-        else {
-            operatorDisplay.textContent = operation;
+            operation = "";
         }
         isOperatorSelected = true;
-        
+        operatorDisplay.textContent = operation;
     })
 })
 
@@ -50,6 +47,7 @@ equalBtn.addEventListener(("click"), () => {
         calculate();
     }
     operatorDisplay.textContent = "";
+    operation = "";
 })
 
 const clearBtn = document.querySelector("#clear");
