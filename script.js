@@ -113,7 +113,7 @@ function multiply(valueA, valueB){
 }
 
 function divide(valueA, valueB){
-    if(valueB == 0) return "lol, nice try";
+    if(valueB == 0) return "nice try";
     else return valueA / valueB;
 }
 
