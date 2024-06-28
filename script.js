@@ -62,26 +62,26 @@ clearBtn.addEventListener(("click"), () => {
 
 const backspaceBtn = document.querySelector("#backspace");
 backspaceBtn.addEventListener("click", () => {
-    if(display.textContent == valueA || valueB){
-        if (isOperatorSelected) {
+    if (isOperatorSelected) {
+        if (valueB != "") {
             valueB = backspace(valueB);
             display.textContent = valueB;
             if(valueB == ""){
-                display.textContent = "000";
+                display.textContent = "";
             }
         }
-        else{
-            valueA = backspace(valueA);
-            display.textContent = valueA;
-            if(valueA == ""){
-                display.textContent = "000";
-            }
+        else {
+            isOperatorSelected = false;
+            operatorDisplay.textContent = "";
+        }
+    }
+    else{
+        valueA = backspace(valueA);
+        display.textContent = valueA;
+        if(valueA == ""){
+            display.textContent = "000";
         }
     } 
-    else {
-        isOperatorSelected = false;
-        operatorDisplay.textContent = "";
-    }  
 })
 
 function calculate(){

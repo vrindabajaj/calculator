@@ -37,7 +37,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2px;
 }
 
 .operation {
@@ -47,11 +46,11 @@ body {
     display: flex;
     justify-content: end;
     color: #434a36;
-    
 }
 
 .value {
     margin: 0;
+    height:65%;
     display: flex;
     font-size: 40px;
     justify-content: end;
