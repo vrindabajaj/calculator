@@ -81,14 +81,14 @@ button {
     -webkit-user-select: none;
 }
 
-button:hover {
+/* button:hover {
     background-color: #ffd5ad;
-}
+} */
 
 button:active {
     background-color: #ffc289;
     box-shadow: #ffaf87 0 -1px 0 3px;
-    transform: translate(0px, 3px);
+    transform: translate(0px, 4px);
 }
 
 .number {
@@ -96,12 +96,12 @@ button:active {
     box-shadow: #ffbe73 0 3px 0 4px;
 }
 
-.number:hover {
+/* .number:hover {
     background-color: #ffdaa7;
-}
+} */
 
 .number:active {
     background-color: #ffcc85;
     box-shadow: #ffbe73 0 -1px 0 3px;
-    transform: translate(0px, 3px);
+    transform: translate(0px, 4px);
 }
