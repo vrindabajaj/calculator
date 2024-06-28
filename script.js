@@ -11,17 +11,19 @@ const numbers = document.querySelectorAll(".number");
 numbers.forEach((number) => {
     number.addEventListener("click", (e) => {
         if (e.target.textContent == "." && display.textContent.includes(".")) return;
-        if (isOperatorSelected) {
-            valueB += e.target.textContent;
-            display.textContent = valueB;
-        }
-        else {
-            if (isEqualsPressed) {
-                valueA = "";
-                isEqualsPressed = false;
+        if (display.textContent.length < 13){
+            if (isOperatorSelected) {
+                valueB += e.target.textContent;
+                display.textContent = valueB;
             }
-            valueA += e.target.textContent;
-            display.textContent = valueA;
+            else {
+                if (isEqualsPressed) {
+                    valueA = "";
+                    isEqualsPressed = false;
+                }
+                valueA += e.target.textContent;
+                display.textContent = valueA;
+            }
         }
     })
 })
@@ -39,6 +41,9 @@ const equalBtn = document.querySelector(".equal");
 equalBtn.addEventListener(("click"), () => {
     if (isOperatorSelected) {
         valueA = operate(valueA, valueB, operation);
+        if (valueA.toString().length > 13){
+            valueA = valueA.toExponential(3);
+        }
         display.textContent = valueA;
         valueB = "";
         isOperatorSelected = false;

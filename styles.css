@@ -4,7 +4,7 @@
 
 body {
     background-color: #f99e71;
-    font-family: "Orbitron", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Kode Mono", monospace;
 }
 
 .container {
@@ -81,10 +81,6 @@ button {
     -webkit-user-select: none;
 }
 
-/* button:hover {
-    background-color: #ffd5ad;
-} */
-
 button:active {
     background-color: #ffc289;
     box-shadow: #ffaf87 0 -1px 0 3px;
@@ -95,10 +91,6 @@ button:active {
     background-color: #f9d19a;
     box-shadow: #ffbe73 0 3px 0 4px;
 }
-
-/* .number:hover {
-    background-color: #ffdaa7;
-} */
 
 .number:active {
     background-color: #ffcc85;
